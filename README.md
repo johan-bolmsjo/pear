@@ -82,7 +82,7 @@ real ones.
 
 ## Configuration
 
-The file `pear.config` use a syntax *resembling* JSON. There are two different
+The file `pear.conf` use a syntax *resembling* JSON. There are two different
 section types, environment and command. The environment section define
 variables, for example paths to tools that can later be referenced when defining
 commands.
@@ -90,7 +90,7 @@ commands.
 Example Environment Section:
 
     environment: {
-        sysroot: /
+        sysroot:  /
         binutils: /usr
         gcc:      /usr
     }
@@ -171,9 +171,8 @@ variable without any modification.
 
 A complete example is available in the `example/` directory.
 
-The following command sequence would probably utilize the pear wrapper to
-intercept the host gcc on a typical Linux host when compiling a hello world C
-program.
+The following command sequence would probably utilize the pear to intercept the
+host gcc on a typical Linux host when compiling a hello world C program.
 
     go build
     cd example
