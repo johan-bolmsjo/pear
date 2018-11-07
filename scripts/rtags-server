@@ -1,0 +1,12 @@
+#!/bin/sh
+# Helper to start the rtags server with the correct options.
+# Import compilation logs using "rc -c LOGFILES"
+
+MAX_JOBS=4
+
+if [ x"`type -P rdm`" = x ]; then
+    echo "Command 'rdm' (part of rtags) not found in path!"
+    exit 1
+fi
+
+exec nice rdm -j $MAX_JOBS -M

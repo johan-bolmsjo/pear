@@ -1,0 +1,7 @@
+#!/bin/sh -v
+export PATH=`pwd`/host-gcc/bin:$PATH
+
+gcc -Wall -g -o hello-world hello-world.c
+
+# RTags compilation logs
+find rtags -type f
